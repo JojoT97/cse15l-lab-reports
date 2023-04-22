@@ -18,7 +18,7 @@ in the terminal area, select the arrow. In the dropdown that apears select "Git 
 ![Image](https://user-images.githubusercontent.com/130265120/230792721-02fa8ee7-51ca-4bc4-812d-6da73c6e96d1.png)
 
 Finally, to connect to a remote server type the following command in terminal: `sshcs15lsp23zz@ieng6.ucsd.edu`, replace (zz) with the letters from your course-specific account. Here is what terminal should look like after connecting to the remote server:
-![Image](https://user-images.githubusercontent.com/130265120/233757114-87373762-fc70-44a6-bd86-bc406af0c063.png")
+![Image](https://user-images.githubusercontent.com/130265120/233757114-87373762-fc70-44a6-bd86-bc406af0c063.png)
 
 
 ## Step 3, Trying Some Commands:
