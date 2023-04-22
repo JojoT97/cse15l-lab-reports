@@ -2,7 +2,7 @@
 
 ## Step 1, Install VScode:
 
-Visit this link: [Link]https://code.visualstudio.com/
+Visit this link: [Link](https://code.visualstudio.com/)
 you should see a webpage that looks like this:
 ![Image](https://user-images.githubusercontent.com/130265120/230792166-7885167c-fda6-458c-9fb4-9c8074329ba3.png)
 
