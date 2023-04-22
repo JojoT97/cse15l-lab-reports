@@ -40,7 +40,7 @@ Here is an example of me using a command:
   
 In this example, the cp command copies the borzoi2 image from my otherBorzoi folder to the parent borzois folder.
 
-Here of examples of commands being used after connecting to a remote server:
+Here are examples of commands being used after connecting to a remote server:
 
 The pwd command prints the working directory.
 ![Image](https://user-images.githubusercontent.com/130265120/233757913-c2647ca0-ed87-4121-b205-65b521a3c826.png)
