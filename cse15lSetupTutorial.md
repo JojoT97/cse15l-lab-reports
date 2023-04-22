@@ -45,7 +45,7 @@ Here of examples of commands being used after connecting to a remote server:
 The pwd command prints the working directory.
 ![Image](https://user-images.githubusercontent.com/130265120/233757913-c2647ca0-ed87-4121-b205-65b521a3c826.png)
 
-The ls command lists everything in the current directory.
+The ls command lists everything in the working directory.
 ![Image](https://user-images.githubusercontent.com/130265120/233757976-5a360c9b-2679-4ccc-a599-2b2555c46333.png)
 
 The cat command displays data from inside the file. Since there is no data inside the file nothing was displayed.
