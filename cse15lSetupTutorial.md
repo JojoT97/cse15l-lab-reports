@@ -17,7 +17,8 @@ Terminal > New Terminal. You can also use the shortcut Ctrl + Shift + `. Near th
 in the terminal area, select the arrow. In the dropdown that apears select "Git Bash" as shown here:
 ![Image](https://user-images.githubusercontent.com/130265120/230792721-02fa8ee7-51ca-4bc4-812d-6da73c6e96d1.png)
 
-Finally, to connect to a remote server type the following command in terminal: `sshcs15lsp23zz@ieng6.ucsd.edu`, replace (zz) with the letters from your course-specific account.
+Finally, to connect to a remote server type the following command in terminal: `sshcs15lsp23zz@ieng6.ucsd.edu`, replace (zz) with the letters from your course-specific account. Here is what terminal should look like after connecting to the remote server:
+
 
 ## Step 3, Trying Some Commands:
 
@@ -33,7 +34,7 @@ Here are a list of useful commands you can try:
 - cat /home/linux/ieng6/cs15lsp23/public/hello.txt
 
 
-Here is an exaple of me using a command:
+Here is an example of me using a command:
 ![Image](https://user-images.githubusercontent.com/130265120/230793291-705cc05a-6bd2-4472-9dfb-a0403fbb5a19.png)
   
 In this example, the cp command copies the borzoi2 image from my otherBorzoi folder to the parent borzois folder.
