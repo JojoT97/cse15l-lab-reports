@@ -43,5 +43,62 @@ that it needs when creating the server.
 It is responsible for storing the complete message being displayed
 on the page.
 ### In the first screenshot:
+The message field from the Handler class changes its value to
+"Apple(\n)" which is the input from the query, aswell as a hidden new line at the end.
+### In the second screenshot:
+The message field from the Handler class changes its value to
+"Apple(\n)Pear(\n)" where (\n) is not text, rather a new line on the page. Unlike the first screenshot, the text displayed on the page is not exactly the same as the input (Pear) from the query. This is because the input each time gets appended to the message field, and then the message string is what gets displayed on the page. In the beginning the message field was an empty string. Like before the message displayed on the page has a hidden next line at the end of the text in preperation for any future inputs.
 
+# Bug Handling
 
+## Failure inducing input
+```java
+    @Test 
+    public void testReverseInPlaceFail() {
+        int[] input1 = {1,2,3};
+        ArrayExamples.reverseInPlace(input1);
+        assertArrayEquals(new int[]{ 3,2,1 }, input1);
+    }
+```
+
+## Non failure inducing input 
+```java
+    @Test 
+    public void testReverseInPlacePass() {
+        int[] input1 = {1,2,1};
+        ArrayExamples.reverseInPlace(input1);
+        assertArrayEquals(new int[]{ 1,2,1 }, input1);
+    }
+```
+
+## Bug symptoms
+![Image](https://user-images.githubusercontent.com/130265120/233874030-4cac6568-4190-475e-82e8-026bdd6f4729.png)
+
+## Code before bug fix:
+```java
+    static void reverseInPlace(int[] arr) {
+        for(int i = 0; i < arr.length; i += 1) {
+          arr[i] = arr[arr.length - i - 1];
+        }
+    }
+```
+
+## Code after bug fix:
+```java
+    static void reverseInPlace(int[] arr) {
+        for(int i = 0; i < arr.length/2; i += 1) {
+            int replacement = arr[i];
+            arr[i] = arr[arr.length - i - 1];
+            arr[arr.length - i - 1] = replacement;
+        }
+    }
+```
+What the changed code with the bug fix does is swap the frontside element with its backside counterpart, rather
+than simply replacing the frontside element with the backside element. Also, the new code does not iterate more times than half the array length. This is to prevent elements from being swaped back to its original position.
+
+## Knowledge gained from week 3
+During week 3, i learned how to create a webserver using java.
+Specifically i learned how to use input from the url to display messages on a webpage.
+Before i did not know that you can make a webserver as well as program their behavior using java.
+I previously thought it would be impossible or atleast very difficult to do so without using a scripting language like javascript along side
+with html. 
