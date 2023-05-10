@@ -43,8 +43,8 @@ that it needs when creating the server.
 It is responsible for storing the complete message being displayed
 on the page.
 ### In the first screenshot:
-The message field from the Handler class changes its value to
-"Apple(\n)" which is the input from the query, aswell as a hidden new line at the end.
+The url typed in the searchbar above is used as a URI argument for the Handler classes handleRequest
+method. The handleRequest method first checks if the path of the uri (aka url) is equal to "/add-message". If so, The message field from the Handler class changes its value to include a parsed string from after the first 2 characters of the url's query. In the case of this screenshot, the message field of the handler class becomes "Apple(\n)" which is the input from the query, aswell as a hidden new line at the end.
 ### In the second screenshot:
 The message field from the Handler class changes its value to
 "Apple(\n)Pear(\n)" where (\n) is not text, rather a new line on the page. Unlike the first screenshot, the text displayed on the page is not exactly the same as the input (Pear) from the query. This is because the input each time gets appended to the message field, and then the message string is what gets displayed on the page. In the beginning the message field was an empty string. Like before the message displayed on the page has a hidden next line at the end of the text in preperation for any future inputs.
@@ -93,8 +93,8 @@ The message field from the Handler class changes its value to
         }
     }
 ```
-What the changed code with the bug fix does is swap the frontside element with its backside counterpart, rather
-than simply replacing the frontside element with the backside element. Also, the new code does not iterate more times than half the array length. This is to prevent elements from being swaped back to its original position.
+A symptom of the bug in the initial code is producing an output that seems to mirror the back half of the array in the front half of the array, rather then reverse the array. 
+What the changed code with the bug fix does is swap the frontside element with its backside counterpart, rather than simply replacing the frontside element with the backside element. Also, the new code does not iterate more times than half the array length. This is to prevent elements from being swaped back to its original position.
 
 ## Knowledge gained from week 3
 During week 3, i learned how to create a webserver using java.
