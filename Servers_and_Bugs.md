@@ -93,7 +93,8 @@ The message field from the Handler class changes its value to
         }
     }
 ```
-A symptom of the bug in the initial code is producing an output that seems to mirror the back half of the array in the front half of the array, rather then reverse the array. 
+A symptom of the bug in the initial code is producing an output that seems to mirror the back half of the array in the front half of the array, rather then reverse the array. Just from looking at the code i could tell it would not behave correctly. Though i did suspect it would appear to work if the first half and second half of the array were mirrors of each other. This is because the initial code simply replaces the code from the front of the array with its corresponding element from the back. As the index of the loop moves past the half way mark of the array, it starts replacing the back elements with the elements from the front that were already replaced with the back elements. Thus by the time the loop reaches the back half of the array, the back element values are simple replaced with the same value it had intitially. I made a passing test that contained mirrored elements {1,2,1}, and a failing test with values increasing from least to greatest {1,2,3}. The first array test passed and the second one failed, confirming my theory. 
+
 What the changed code with the bug fix does is swap the frontside element with its backside counterpart, rather than simply replacing the frontside element with the backside element. Also, the new code does not iterate more times than half the array length. This is to prevent elements from being swaped back to its original position.
 
 ## Knowledge gained from week 3
