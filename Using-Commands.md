@@ -4,11 +4,11 @@ It then proceeds to search and print all lines of the text file that contains th
 ## -i option
 
 ### Example 1
-**Input: **
+**Input:**
 
 ```grep -i Plasma rr74.txt```
 
-**Output: **
+**Output:**
 
  ```
  min, and plasma removed and frozen. Later, samples were
@@ -30,11 +30,11 @@ As you can see in the above output certain lines contains the string "Plasma" wi
 
 ### Example 2
 
-**Input: **
+**Input:**
 
 ```grep -i was rr74.txt```
 
-**Output: **
+**Output:**
 ```
 (simulating sea level). Exposure was continuous, with
           was removed and animals were sorted by sex. At 6 weeks
@@ -105,11 +105,11 @@ However it is still useful to use incase that is not true, as the person using t
 
 ### Example 1
 
-**Input: **
+**Input:**
 
 ```grep -v e rr73.txt```
 
-**Output: **
+**Output:**
 ```
 Introduction
 
@@ -168,11 +168,11 @@ since I want to find all lines in the text file that does NOT include the string
 
 ### Example 2
 
-**Input: **
+**Input:**
 
 ```grep -iv e rr73.txt```
 
-**Output: **
+**Output:**
 
 ```
 Introduction
@@ -229,11 +229,11 @@ This is useful for if you want to not only exclude any line with the string "e",
 
 ### Example 1
 
-**Input: **
+**Input:**
 
 ```grep -w NO rr74.txt```
 
-**Output: **
+**Output:**
 
 ```
 NO, which may be synthesized by any of the three
@@ -267,11 +267,11 @@ The -w option is useful in this example since there are words such as "NOS" in t
 
 ### Example 2
 
-**Input: **
+**Input:**
 
 ```grep -wi no rr74.txt```
 
-**Output: **
+**Output:**
 
 ```
 NO, which may be synthesized by any of the three
@@ -308,11 +308,11 @@ since not always will you know all the contents inside a text file, thus if for 
 ## -c option
 
 ### Example 1
-**Input: **
+**Input:**
 
 ```grep -c and rr37.txt```
 
-**Output: **
+**Output:**
 
 ```
 102
@@ -322,12 +322,12 @@ It searches the file you give it for the string you give it, but rather than pri
 This is very helpful for when you need to know the quantity of lines that contain a given string rather than simple veiwing all that lines tha do. A reason for this is because counting all the lines manually can be very
 time consuming and especially pointless when this option exists.
 
-### Example 1
-**Input: **
+### Example 2
+**Input:**
 
 ```grep -cw and rr37.txt```
 
-**Output: **
+**Output:**
 
 ```
 97
